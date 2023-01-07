@@ -1,0 +1,405 @@
+/* BASE */
+
+:root {
+  --dark-gray: #0f172a;
+  --blue: #15b0f0;
+  --white: #ffffff;
+  --transparent-blue: #d7f0fc;
+  --heading-font: "Permanent Marker", cursive;
+  --paragraph-font: "Roboto Mono", monospace;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  border-width: 0;
+  border-style: solid;
+  border-color: #e5e7eb;
+}
+
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  background-color: var(--blue);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+/* GENERIC */
+
+.noscroll {
+  overflow: hidden;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+a.button {
+  background: var(--blue);
+  border-radius: 0.5rem;
+  border: 1px solid var(--blue);
+  color: var(--white);
+  display: block;
+  font-family: var(--paragraph-font);
+  padding: 1rem;
+  text-decoration: none;
+}
+
+a.button:hover {
+  background: transparent;
+  color: var(--blue);
+}
+
+/* HEADER NAV */
+
+nav {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  width: 100%;
+}
+
+nav li {
+  background: var(--blue);
+  padding-bottom: 1rem;
+}
+
+nav li:first-of-type {
+  border-radius: 0 0 0 0.5rem;
+  padding-left: 1rem;
+}
+
+nav a {
+  border-bottom: 1px dashed var(--white);
+  color: var(--white);
+  display: block;
+  font-family: var(--paragraph-font);
+  margin: 1rem 1rem 0 0;
+  padding: 0.75rem;
+  text-decoration: none;
+}
+
+nav a:hover {
+  border-style: solid;
+}
+
+nav a.button {
+  border: 1px solid var(--white);
+  padding: 0.75rem;
+}
+
+nav a.button:hover {
+  background: var(--white);
+  color: var(--blue);
+}
+
+/* MAIN */
+
+main section {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--paragraph-font);
+  justify-content: center;
+  min-height: 66vh;
+  padding: 5rem 0;
+  width: 100%;
+}
+
+/* HERO */
+
+#hero {
+  height: 100vh;
+  position: relative;
+}
+
+#hero h1,
+#hero h2 {
+  color: var(--white);
+  font-family: var(--heading-font);
+  letter-spacing: 0.05em;
+}
+
+#hero h1 a {
+  color: var(--white);
+  font-size: 5rem;
+  text-decoration: none;
+}
+
+#hero h2 {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+#hero i.si-chevron-down {
+  bottom: 1rem;
+  color: var(--transparent-blue);
+  font-size: 2rem;
+  position: absolute;
+  transition: all 0.2s ease;
+}
+
+/* DESCRIPTION */
+
+#description {
+  background: var(--transparent-blue);
+  font-family: var(--paragraph-font);
+}
+
+#description p {
+  color: var(--dark-gray);
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  margin: 0 auto;
+  width: 35em;
+}
+
+#description a {
+  margin-top: 5rem;
+}
+
+/* PRICING */
+
+#pricing {
+  background: var(--white);
+}
+
+#pricing div#plans {
+  display: flex;
+  gap: 2rem;
+}
+
+#pricing div.plan {
+  border-radius: 0.5rem;
+  border: 1px solid var(--transparent-blue);
+  display: flex;
+  flex-direction: column;
+  margin-top: 5rem;
+  padding-bottom: 2rem;
+  width: 275px;
+}
+
+#pricing h3 {
+  background: var(--transparent-blue);
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 2rem 2rem 1rem;
+}
+
+#pricing div.plan-price,
+#pricing ul,
+#pricing div.plan-cta {
+  padding: 1rem 2rem 0;
+}
+
+#pricing div.plan-price span {
+  line-height: 2rem;
+}
+
+#pricing div.plan-price span.currency {
+  vertical-align: top;
+}
+
+#pricing div.plan-price span.price {
+  color: var(--blue);
+  font-size: 1.875rem;
+}
+
+#pricing ul {
+  line-height: 1.5rem;
+  list-style: inside;
+}
+
+#pricing div.plan.coming-soon {
+  background: repeating-linear-gradient(
+    135deg,
+    var(--transparent-blue),
+    var(--transparent-blue) 20px,
+    var(--blue) 21px,
+    var(--transparent-blue) 22px
+  );
+}
+
+#pricing div.plan.coming-soon div {
+  align-items: center;
+  color: var(--blue);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-end;
+  padding: 0 2rem;
+}
+
+#pricing div.plan.coming-soon p {
+  background: var(--white);
+  border-radius: 0.5rem;
+  margin: 0;
+  padding: 1rem;
+  width: 100%;
+}
+
+/* SCREENSHOTS */
+
+#screenshots {
+  background: var(--transparent-blue);
+  overflow: hidden;
+  padding: 5rem;
+}
+
+#gallery {
+  display: flex;
+  gap: 2rem;
+  padding: 5rem 0;
+}
+
+#gallery div.gallery-item {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  width: 400px;
+}
+
+#gallery img {
+  width: 100%;
+}
+
+/* FOOTER */
+
+footer {
+  color: var(--white);
+  font-family: var(--paragraph-font);
+}
+
+footer section {
+  display: flex;
+}
+
+footer h4 {
+  font-family: var(--heading-font);
+  font-size: 1.5rem;
+  letter-spacing: 0.025em;
+  line-height: 2rem;
+}
+
+#footer-top {
+  padding: 5rem 5rem 0;
+}
+
+#footer-description p {
+  font-size: 1em;
+  line-height: 1.5rem;
+  max-width: 35em;
+}
+
+#footer-links {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+#footer-links div {
+  margin-right: 4rem;
+}
+
+#footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+#footer-links li {
+  padding: none;
+}
+
+#footer-links a {
+  border-bottom: 1px dashed var(--white);
+  color: var(--white);
+  display: inline-block;
+  line-height: 1.5rem;
+  text-decoration: none;
+}
+
+#footer-links a:hover {
+  border-style: solid;
+}
+
+#footer-bottom {
+  justify-content: space-between;
+  padding: 2rem 5rem 2rem;
+}
+
+/* MODAL */
+
+dialog#modal {
+  background: var(--transparent-blue);
+  border-radius: 0.5rem;
+  border: 2px solid var(--blue);
+  height: 80%;
+  padding: 0;
+  width: 80%;
+  z-index: 2;
+}
+
+::backdrop {
+  backdrop-filter: blur(2px);
+}
+
+div#modal-top {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+i#modal-close {
+  color: var(--blue);
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 0.5rem;
+}
+
+div#modal-content,
+div#modal-content img {
+  width: 100%;
+}
+
+div#modal-content {
+  height: calc(100% - 8rem);
+}
+
+div#modal-content img {
+  display: block;
+  height: 100%;
+  object-fit: contain;
+}
+
+div#modal-content p {
+  font-family: var(--paragraph-font);
+  line-height: 1rem;
+  margin: 0;
+  padding: 2rem 0;
+  text-align: center;
+  width: 100%;
+}
