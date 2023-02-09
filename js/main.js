@@ -119,10 +119,33 @@ window.addEventListener("resize", function (_) {
     .forEach(toggleActiveGalleryItem);
 });
 
-document.getElementById("modal").addEventListener("close", function (_) {
+document
+  .getElementById("gallery-modal")
+  .addEventListener("close", function (_) {
+    document.body.classList.remove("noscroll");
+  });
+
+document
+  .getElementById("gallery-modal-close")
+  .addEventListener("click", function (_) {
+    document.getElementById("gallery-modal").close();
+  });
+
+/* FORM */
+
+document.querySelectorAll("a.ask-link").forEach(function (item) {
+  item.addEventListener("click", function (event) {
+    event.preventDefault();
+    document.getElementById("ask-modal").showModal();
+  });
+});
+
+document.getElementById("ask-modal").addEventListener("close", function (_) {
   document.body.classList.remove("noscroll");
 });
 
-document.getElementById("modal-close").addEventListener("click", function (_) {
-  document.getElementById("modal").close();
-});
+document
+  .getElementById("ask-modal-close")
+  .addEventListener("click", function (_) {
+    document.getElementById("ask-modal").close();
+  });

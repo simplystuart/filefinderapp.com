@@ -16,7 +16,7 @@
   <header>
     <nav>
       <ul>
-        <li><a href="#">Ask More!</a><li>
+        <li><a class="ask-link" href="#">Ask More!</a></li>
         <li><a href="#pricing">Pricing</a></li>
         <li>
           <a class="button" href="#">
@@ -133,9 +133,9 @@
 
           <ul>
             <li><a href=#description>Pitch</a></li>
-            <li><a href=#pricing">Pricing</a></li>
-            <li><a href=#">Purchase</a></li>
-            <li><a href=#">Ask us anything!</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#">Purchase</a></li>
+            <li><a class="ask-link" href="#">Ask us anything!</a></li>
           </ul>
         </div>
 
@@ -154,15 +154,49 @@
       </div>
 
       <div id="attribution">
-        Made in PA by <a href="#">Dumfounded Tech</a> with ❤️.
+        Made in PA by <a href="mailto:hello@dumfoundedtech.com" target="_blank">Dumfounded Tech</a> with ❤️.
       </div>
     </section>
   </footer>
-  <dialog id="modal">
-    <div id="modal-top">
-      <i id="modal-close" class="si-close"></i>
+  <dialog id="gallery-modal">
+    <div class="modal-top">
+      <i id="gallery-modal-close" class="si-close"></i>
     </div>
-    <div id="modal-content">
+    <div id="gallery-modal-content" class="modal-content"></div>
+  </dialog>
+  <dialog id="ask-modal">
+    <div class="modal-top">
+      <i id="ask-modal-close" class="si-close"></i>
+    </div>
+    <div class="modal-content">
+      <form class="modal-content" name="ask" method="POST" netlify>
+        <h4>Ask us anything!</h4>
+        <p>And we will get back to you as soon as we are able!</p>
+
+        <div class="form-row">
+          <label for="name">Your Name</label>
+          <input id="name"  name="name" type="text" required>
+        </div>
+
+        <div class="form-row">
+          <label for="role">Your Role</label>
+          <input id="role" name="role" type="text" required>
+        </div>
+
+        <div class="form-row">
+          <label for="email">Your Email</label>
+          <input id="email" type="email" required>
+        </div>
+
+        <div class="form-row">
+          <label for="question">Your Question</label>
+          <textarea id="question" name="quest"></textarea>
+        </div>
+
+        <div class="form-row">
+          <input type="submit" value="Send it!">
+        </div>
+      </form>
     </div>
   </dialog>
   <script src="/js/main.js" type="text/javascript"></script>

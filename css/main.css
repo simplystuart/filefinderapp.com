@@ -403,7 +403,7 @@ footer h4 {
 
 /* MODAL */
 
-dialog#modal {
+dialog {
   background: var(--transparent-blue);
   border-radius: 0.5rem;
   border: 2px solid var(--blue);
@@ -417,41 +417,114 @@ dialog#modal {
   backdrop-filter: blur(2px);
 }
 
-div#modal-top {
+div.modal-top {
   display: flex;
   justify-content: flex-end;
   width: 100%;
 }
 
-i#modal-close {
+i.si-close {
   color: var(--blue);
   cursor: pointer;
   font-size: 2rem;
   padding: 0.5rem;
 }
 
-div#modal-content,
-div#modal-content img {
+div.modal-content,
+div.modal-content img {
   width: 100%;
 }
 
-div#modal-content {
+div.modal-content {
   height: calc(100% - 8rem);
 }
 
-div#modal-content img {
+div.modal-content img {
   display: block;
   height: 100%;
   object-fit: contain;
 }
 
-div#modal-content p {
+div.modal-content p {
   font-family: var(--paragraph-font);
-  line-height: 1rem;
+  line-height: 1.5rem;
+  max-width: 25rem;
   margin: 0;
   padding: 2rem 0;
   text-align: center;
   width: 100%;
+}
+
+div.modal-content form {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1em;
+}
+
+div.modal-content form p {
+  padding: 1.5rem 0;
+  text-align: left;
+}
+
+div.modal-content h4,
+div.modal-content div.form-row {
+  min-width: 25rem;
+}
+
+div.modal-content h4 {
+  color: var(--blue);
+  font-family: var(--heading-font);
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  text-align: left;
+}
+
+div.modal-content div.form-row {
+  margin-bottom: 1rem;
+}
+
+div.modal-content label,
+div.modal-content input:not([type="submit"]),
+div.modal-content textarea {
+  display: block;
+  font-family: var(--paragraph-font);
+  text-align: left;
+  width: 100%;
+}
+
+div.modal-content label {
+  margin-bottom: 0.5rem;
+}
+
+div.modal-content input:not([type="submit"]),
+div.modal-content textarea {
+  border: 2px dashed var(--blue);
+  border-radius: 0.5rem;
+  outline: none;
+  padding: 0.5rem;
+}
+
+div.modal-content textarea {
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: var(--blue);
+  border-radius: 0.25rem;
+  border: 1px solid var(--blue);
+  color: var(--white);
+  cursor: pointer;
+  font-family: var(--paragraph-font);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-top: 1rem;
+  padding: 0.75rem;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--white);
+  color: var(--blue);
 }
 
 @media (max-width: 599px) {
@@ -499,6 +572,15 @@ div#modal-content p {
 
   #footer-bottom div {
     padding-top: 2rem;
+  }
+
+  div.modal-content {
+    padding: 0 1rem;
+  }
+
+  div.modal-content h4,
+  div.modal-content div.form-row {
+    min-width: auto;
   }
 }
 
