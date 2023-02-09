@@ -1,3 +1,21 @@
+/* SCROLLING */
+
+document.getElementById("down-arrow").addEventListener("click", function (_) {
+  window.scrollBy({ top: window.innerHeight, left: 0, behavior: "smooth" });
+});
+
+window.addEventListener(
+  "scroll",
+  function (_) {
+    window.pageYOffset > 0
+      ? document.getElementById("down-arrow").classList.add("hidden")
+      : document.getElementById("down-arrow").classList.remove("hidden");
+  },
+  true
+);
+
+/* GALLERY */
+
 function getGalleryConstants() {
   var width = document.querySelector("div.gallery-item").clientWidth;
   return width == 400
@@ -31,12 +49,6 @@ function toggleActiveGalleryItem(item) {
   var browserWidth = document.documentElement.clientWidth;
   var domRect = item.getBoundingClientRect();
 
-  console.log({
-    x: domRect.x,
-    browserWidth: browserWidth,
-    width: domRect.width,
-  });
-
   if (domRect.x > 0 && browserWidth > domRect.x + domRect.width) {
     item.classList.add("active-gallery-item");
   } else {
@@ -44,25 +56,12 @@ function toggleActiveGalleryItem(item) {
   }
 }
 
-document.getElementById("down-arrow").addEventListener("click", function (_) {
-  window.scrollBy({ top: window.innerHeight, left: 0, behavior: "smooth" });
-});
-
-window.addEventListener(
-  "scroll",
-  function (_) {
-    widdow.pageYOffset > 0
-      ? document.getElementById("down-arrow").classList.add("hidden")
-      : document.getElementById("down-arrow").classList.remove("hidden");
-  },
-  true
-);
-
 document.querySelectorAll("div.gallery-item").forEach(function (item) {
   item.addEventListener("click", function (_) {
     if (document.documentElement.clientWidth > 599) {
-      document.getElementById("modal-content").innerHTML = item.innerHTML;
-      document.getElementById("modal").showModal();
+      document.getElementById("gallery-modal-content").innerHTML =
+        item.innerHTML;
+      document.getElementById("gallery-modal").showModal();
       document.body.classList.add("noscroll");
     }
   });
