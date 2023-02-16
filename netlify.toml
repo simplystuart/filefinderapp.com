@@ -1,0 +1,20 @@
+[functions]
+  directory = "functions"
+
+[[redirects]]
+  from = "/events/customers/data_request"
+  to = "/.netlify/functions/events"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/events/customers/redact"
+  to = "/.netlify/functions/events"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/events/shop/redact"
+  to = "/.netlify/functions/events"
+  status = 200
+  force = true
