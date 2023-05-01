@@ -527,47 +527,140 @@ input[type="submit"]:hover {
   color: var(--blue);
 }
 
-/* PAGES */
+/* PAGES & POSTS */
 
-#page header {
+.page header,
+.post header {
   padding: 2rem 5rem;
 }
 
-#page header a {
+.page header a,
+.post header a {
   color: var(--white);
   font-family: var(--heading-font);
   font-size: 3rem;
-  line-height: 1rem;
+  line-height: 1;
   letter-spacing: 0.05rem;
   text-decoration: none;
 }
 
-#page main {
+.page main,
+.post main {
   background-color: var(--white);
-  padding: 2rem 5rem;
 }
 
-#page main h1 {
+.page main h1,
+.post main h1 {
   color: var(--blue);
   font-family: var(--heading-font);
   letter-spacing: 0.025rem;
 }
 
-#page main h2,
-#page main p,
-#page main li {
+.page main h2,
+.page main p,
+.page main li,
+.post main h2,
+.post main p,
+.post main li {
   font-family: var(--paragraph-font);
   font-size: 1rem;
   line-height: 1.5rem;
 }
 
-#page main h2 {
+.page main {
+  padding: 2rem 5rem;
+}
+
+.page main h2 {
   margin-top: 3rem;
 }
 
-#page main ul {
+.page main ul {
   list-style-position: inside;
   padding: 0;
+}
+
+.post main {
+  padding-bottom: 2rem;
+}
+
+.post main h2 {
+  color: var(--blue);
+  font-weight: normal;
+  padding-top: 1rem;
+}
+
+.post div.title {
+  align-items: baseline;
+  background-color: var(--transparent-blue);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2rem 5rem 1rem;
+}
+
+.post div.content {
+  padding: 2rem 5rem;
+}
+
+.post div.content a {
+  color: var(--blue);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.post div.content p {
+  margin: 0;
+  padding: 1rem 0;
+}
+
+.post div.content p:last-of-type {
+  border-bottom: 1px solid var(--transparent-blue);
+  padding-bottom: 2rem;
+}
+
+.post div.content-bottom {
+  padding: 0 5rem;
+}
+
+.post a.back-button {
+  display: inline-block;
+}
+
+/* CHANGELOG */
+
+.page .release {
+  background-color: var(--transparent-blue);
+  border-radius: 0.5rem;
+  margin: 1rem 0;
+  padding: 2rem;
+}
+
+.page .release a.button {
+  display: inline-block;
+}
+
+.page .release a.post-link {
+  border-bottom: 1px dashed var(--blue);
+  color: var(--blue);
+  display: inline-block;
+  padding-bottom: 0.75rem;
+  text-decoration: none;
+}
+
+.page .release h2 {
+  margin-top: 1rem;
+}
+
+.page .release h3 {
+  font-family: var(--paragraph-font);
+  font-size: 0.75rem;
+  line-height: 1rem;
+  margin-top: 1rem;
+}
+
+.page .release p {
+  margin: 2rem 0;
 }
 
 /* MOBILE */
