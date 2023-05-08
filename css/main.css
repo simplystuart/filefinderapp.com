@@ -152,7 +152,13 @@ main section {
 
 #hero h2 {
   font-size: 1.875rem;
-  line-height: 2.25rem;
+}
+
+#hero > a {
+  background: var(--white);
+  color: var(--blue);
+  font-weight: bold;
+  margin-top: 1.5rem;
 }
 
 #hero #down-arrow {
