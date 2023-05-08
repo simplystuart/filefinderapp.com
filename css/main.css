@@ -193,19 +193,19 @@ main section {
   margin-top: 5rem;
 }
 
-/* PRICING */
+/* PLANS */
 
-#pricing {
+#plans {
   background: var(--white);
 }
 
-#pricing div#plans {
+#plans div#plans {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
 }
 
-#pricing div.plan {
+#plans div.plan {
   border-radius: 0.5rem;
   border: 1px solid var(--transparent-blue);
   display: flex;
@@ -215,37 +215,43 @@ main section {
   width: 275px;
 }
 
-#pricing h3 {
+#plans h3 {
   background: var(--transparent-blue);
   border-radius: 0.5rem 0.5rem 0 0;
   padding: 2rem 2rem 1rem;
 }
 
-#pricing div.plan-price,
-#pricing ul,
-#pricing div.plan-cta {
+#plans div.plan-price,
+#plans ul,
+#plans div.plan-cta {
   padding: 1rem 2rem 0;
 }
 
-#pricing div.plan-price span {
+#plans div.plan-price span {
   line-height: 2rem;
 }
 
-#pricing div.plan-price span.currency {
+#plans div.plan-price span.currency {
   vertical-align: top;
 }
 
-#pricing div.plan-price span.price {
+#plans div.plan-price span.price {
   color: var(--blue);
   font-size: 1.875rem;
 }
 
-#pricing ul {
+#plans p#free-trial-text {
+  margin: 1rem 2rem 0;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+#plans ul {
   line-height: 1.5rem;
   list-style: inside;
 }
 
-#pricing div.plan.coming-soon {
+#plans div.plan.coming-soon {
   background: repeating-linear-gradient(
     135deg,
     var(--transparent-blue),
@@ -255,7 +261,7 @@ main section {
   );
 }
 
-#pricing div.plan.coming-soon div {
+#plans div.plan.coming-soon div {
   align-items: center;
   color: var(--blue);
   display: flex;
@@ -265,7 +271,7 @@ main section {
   padding: 0 2rem;
 }
 
-#pricing div.plan.coming-soon p {
+#plans div.plan.coming-soon p {
   background: var(--white);
   border-radius: 0.5rem;
   margin: 0;
@@ -729,10 +735,10 @@ input[type="submit"]:hover {
 }
 
 @media (max-width: 899px) {
-  #pricing div#plans {
+  #plans div#plans {
     justify-content: center;
   }
-  #pricing div.plan {
+  #plans div.plan {
     margin-top: 3rem;
   }
 }
