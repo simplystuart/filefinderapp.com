@@ -9,3 +9,37 @@
 
 [[plugins]]
   package = "netlify-plugin-submit-sitemap"
+
+[[redirects]]
+  from = "https://mixpanel.filefinderapp.com/lib.min.js"
+  to = "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"
+  status = 200
+  force = true
+  headers = {X-Forwarded-Host = "https://mixpanel.filefinderapp.com"}
+
+[[redirects]]
+  from = "https://mixpanel.filefinderapp.com/lib.js"
+  to = "https://cdn.mxpnl.com/libs/mixpanel-2-latest.js"
+  status = 200
+  force = true
+  headers = {X-Forwarded-Host = "mixpanel.filefinderapp.com"}
+
+[[redirects]]
+  from = "https://mixpanel.filefinderapp.com/decide/*"
+  to = "https://decide.mixpanel.com/decide/:splat"
+  status = 200
+  force = true
+
+  [redirects.headers]
+    Host = "decide.mixpanel.com"
+    X-Forwarded-Host = "mixpanel.filefinderapp.com"
+
+[[redirects]]
+  from = "https://mixpanel.filefinderapp.com/*"
+  to = "https://api.mixpanel.com/:splat"
+  status = 200
+  force = true
+
+  [redirects.headers]
+    Host = "api.mixpanel.com"
+    X-Forwarded-Host = "mixpanel.filefinderapp.com"

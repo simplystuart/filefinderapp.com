@@ -1,6 +1,9 @@
 /* MIXPANEL */
 
-mixpanel.init("2b6f345a6a5c4babbf50739ea1e8441b", { debug: true });
+mixpanel.init("2b6f345a6a5c4babbf50739ea1e8441b", {
+  api_host: "https://mixpanel.filefinderapp.com",
+  debug: true,
+});
 
 /* SCROLLING */
 
