@@ -110,10 +110,3 @@ mixpanel.track_links("a:not(.button)", "Link Clicked", (element) => ({
 mixpanel.track_forms("#ask-modal form", "Form Submited", (element) => ({
   Email: element.querySelector("input#email").value,
 }));
-
-document
-  .querySelector("#ask-modal form")
-  .addEventListener("submit", (event) => {
-    const input = event.currentTarget.querySelector("input#email");
-    if (input && input.value) mixpanel.identify(input.value);
-  });

@@ -148,3 +148,10 @@ document
   .addEventListener("click", function (_) {
     document.getElementById("ask-modal").close();
   });
+
+document
+  .querySelector("#ask-modal form")
+  .addEventListener("submit", (event) => {
+    const input = event.currentTarget.querySelector("input#email");
+    if (input && input.value) mixpanel.identify(input.value);
+  });
