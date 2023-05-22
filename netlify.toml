@@ -10,6 +10,9 @@
 [[plugins]]
   package = "netlify-plugin-submit-sitemap"
 
+  [plugins.inputs]
+  trailingSlash = true
+
 [[redirects]]
   from = "https://mixpanel.filefinderapp.com/lib.min.js"
   to = "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"
