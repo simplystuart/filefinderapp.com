@@ -7,11 +7,11 @@
 [[plugins]]
   package = "@netlify/plugin-sitemap"
 
-[[plugins]]
-  package = "netlify-plugin-submit-sitemap"
-
   [plugins.inputs]
   trailingSlash = true
+
+[[plugins]]
+  package = "netlify-plugin-submit-sitemap"
 
 [[redirects]]
   from = "https://mixpanel.filefinderapp.com/lib.min.js"
