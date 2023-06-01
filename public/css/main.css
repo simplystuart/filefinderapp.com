@@ -240,12 +240,6 @@ main section {
   font-size: 1.875rem;
 }
 
-#plans p#free-trial-text {
-  margin: 1rem 2rem 0;
-  color: var(--blue);
-  font-weight: bold;
-}
-
 #plans ul {
   line-height: 1.5rem;
   list-style: inside;
